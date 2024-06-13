@@ -32,10 +32,16 @@ O objetivo deste projeto é criar um modelo capaz de identificar diferentes expr
 - Keras
 - TensorFlow (backend para Keras)
 
-Para instalar as dependências, execute:
+Para instalar as dependências localmente, execute:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Depois rode utilizando:
+
+```bash
+python emotion_reco.py
 ```
 
 Para construir um container e imagem, execute:
