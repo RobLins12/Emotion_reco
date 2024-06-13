@@ -21,8 +21,8 @@ O objetivo deste projeto é criar um modelo capaz de identificar diferentes expr
 - `model.ipynb`: Jupyter notebook para exploração e teste do modelo.
 - `face_detect.py`: Codigo base para detectar faces.
 - `emotion_reco.py`: Arquivo do programa em si.
-- `Dockerfile`: Ambiente em docker configurado.
 - `requirements.txt`: Arquivo contendo as dependências do projeto.
+- `DOCS.md` : Arquivo de documentação de código.
 - `README.md`: Este arquivo.
 
 ## Requisitos
@@ -32,26 +32,23 @@ O objetivo deste projeto é criar um modelo capaz de identificar diferentes expr
 - Keras
 - TensorFlow (backend para Keras)
 
-Para instalar as dependências localmente, execute:
+## Instalando os requisitos
+
+- Site para download da opencv: https://opencv.org/releases/
+- Site para download do python: https://www.python.org/downloads/
+
+## Comandos
+
+Primeiro clone o projeto. Dentro do projeto faça os passos a seguir.
+
+1 - Instale as dependências, para isso execute:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Depois rode utilizando:
+2 - No terminal rode o programa, para isso execute:
 
 ```bash
 python emotion_reco.py
-```
-
-Para construir um container e imagem, execute:
-
-```bash
-docker build -t "nome_da_imagem" .
-```
-
-Para rodar, execute:
-
-```bash
-docker run "nome_da_imagem"
 ```
