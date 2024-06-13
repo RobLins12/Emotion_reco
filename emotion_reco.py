@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator # type: igno
 from tensorflow.keras.preprocessing import image # type: ignore
 from tensorflow.keras.models import load_model # type: ignore
 
-loaded_model = load_model("model.h5")
+loaded_model = load_model("model_50%.h5") # Insira aqui o path para o seu modelo
 
 face_classifier = cv.CascadeClassifier(cv.data.haarcascades + "haarcascade_frontalface_default.xml")
 
@@ -44,7 +44,6 @@ def emotion_prediction(frame, model):
         emotion = "Triste"
       case 6:
         emotion = "Surpresa"
-        
     return prediction, emotion
 
 video_capture = cv.VideoCapture(0)
@@ -56,7 +55,7 @@ while True:
     if result is False:
         break 
 
-    _ , emotion=emotion_prediction(frame=video_frame, model=loaded_model)
+    _ , emotion = emotion_prediction(frame=video_frame, model=loaded_model)
 
     font = cv.FONT_HERSHEY_SIMPLEX
 
@@ -64,7 +63,7 @@ while True:
 
     cv.putText(video_frame, emotion, (50, 50), font, 1, (0, 255, 255), 2, cv.LINE_AA)
 
-    cv.imshow("Face Detection", video_frame)  
+    cv.imshow("Emotion Reco", video_frame)  
 
     if cv.waitKey(1) & 0xFF == ord("q"):
         break
